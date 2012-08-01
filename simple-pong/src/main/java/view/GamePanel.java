@@ -26,7 +26,7 @@ public class GamePanel extends JPanel {
 	
 	private Point	ballLocation	= new Point();
 	private Point	ballSpeedVector	= new Point();
-	final int		ballSpeed		= 4;
+	final int		ballSpeed		= 1;
 	final int		ballRadius		= 5;
 	
 	BufferedImage	offScreenImage;
@@ -42,7 +42,7 @@ public class GamePanel extends JPanel {
 		
 		boardLocation = new Point(200, 385);
 		ballLocation = new Point(200, 50);
-		timer = new Timer(20, new TimerListener());
+		timer = new Timer(5, new TimerListener());
 		timer.start();
 		
 	}
