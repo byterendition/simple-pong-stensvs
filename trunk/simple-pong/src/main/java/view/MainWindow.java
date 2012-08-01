@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.GridBagLayout;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -30,6 +31,7 @@ public class MainWindow extends JFrame {
 		setResizable(false);
 		
 		JPanel contentPane = new JPanel();
+		contentPane.setLayout(new GridBagLayout());
 		GamePanel gamePanel = new GamePanel();
 		
 		contentPane.add(gamePanel);
