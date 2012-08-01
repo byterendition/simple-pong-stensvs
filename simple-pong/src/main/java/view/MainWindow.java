@@ -4,6 +4,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
 import model.Game;
@@ -25,6 +26,16 @@ public class MainWindow extends JFrame {
 		
 		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		addWindowListener(new MainWindowListener());
+		
+		setResizable(false);
+		
+		JPanel contentPane = new JPanel();
+		GamePanel gamePanel = new GamePanel();
+		
+		contentPane.add(gamePanel);
+		add(contentPane);
+		
+		pack();
 	}
 	
 	/**
